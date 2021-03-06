@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class User(BaseModel):
     UserId: str
     SberId: int
@@ -8,10 +9,12 @@ class User(BaseModel):
     Gender: str
     Active: int
 
+
 class Progres(BaseModel):
     UserId: str
     Date: str
     Completed: bool
+
 
 class Categoriya(BaseModel):
     Name: str
