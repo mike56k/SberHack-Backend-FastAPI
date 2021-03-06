@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from scheme import *
 from SQLighter import *
 import json
-import uvicorn
+
 
 app = FastAPI()
 
@@ -119,5 +119,3 @@ async def getAchiviesForUser(user_id: str):
     Achievements = db_worker.get_achievement_user(user_id)
     db_worker.close()
     return Achievements
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
